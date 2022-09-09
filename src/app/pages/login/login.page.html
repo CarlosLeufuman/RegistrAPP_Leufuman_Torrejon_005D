@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="primary"></ion-icon>
+       </ion-button>
+    </ion-buttons>
+
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="titulo">¿Ya tienes Cuenta?</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card class="card">
+    <ion-card-content>
+      <p>
+      Si tienes cuenta en RegistrAPP, solo debe ingresar su Correo y Contraseña.
+     </p>
+     <P class="no" routerLink="/registro"> Si NO tienes cuenta Registrate Aquí.</P>
+    </ion-card-content>
+
+
+  </ion-card>
+
+
+  <ion-card>
+    <img src="assets/logologin.png" class="ion-padding">
+    <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+   
+      <ion-item>
+        <ion-label>Email: </ion-label>
+        <ion-input type="email" placeholder="Ingrese Su Correo"
+                   name="email" value="" [(ngModel)]= "usuario.email"
+                   required>
+        </ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Contraseña: </ion-label>
+        <ion-input type="password"	 placeholder="Contraseña"
+                   name="password" value="" [(ngModel)]= "usuario.password"
+                   required>
+        </ion-input>
+      </ion-item>
+  
+      <ion-button [disabled] ="formulario.invalid"
+              type="submit" expand="block" routerLink="/inicio">
+        Unirse
+      </ion-button>
+  
+    </form>
+  </ion-card>
+
+
+  <img src="assets/logo.png" class="ion-padding">
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="primary"></ion-icon>
+       </ion-button>
+    </ion-buttons>
+
+    <ion-title>Mi Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card class="card">
+    <br>
+  <ion-card-title class="titulo">Nombre Alumno o Docente</ion-card-title>
+  <Br>
+</ion-card>
+
+  <ion-card class="card">
+    <br>
+    
+    <icon-card>
+      <img src="assets/perfillogo.png" class="ion-padding">
+    </icon-card>
+    <ion-card-content>
+      <p>
+        Nombre:
+     </p>
+     <p>
+      Rut:
+     </p>
+     <p>
+      Correo:
+   </p>
+   <p>
+    Carrera:
+ </p>
+
+    </ion-card-content>
+
+    <ion-button routerLink="/registroasistencia" expand="block" fill="outline">Ver Asistencia</ion-button>
+    
+    <ion-button routerLink="/inicio" expand="block" fill="outline">Cerrar Sesión</ion-button>
+  </ion-card>
+
+  <img src="assets/logo.png" class="ion-padding">
+
+
+</ion-content>

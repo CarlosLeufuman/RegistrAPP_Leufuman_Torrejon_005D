@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="primary"></ion-icon>
+       </ion-button>
+    </ion-buttons>
+
+    <ion-title>Enviar Sugerencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="titulo">Enviar Sugerencia</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+
+  <ion-card class="card">
+    
+
+    <ion-card-content>
+      <p class="parrafo">
+        Puedes darnos tu opinión o enviarnos sugerencias para que podamos mejorar la APP respondiendo el siguiente formulario.
+     </p>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card>
+    <img src="assets/like.png" class="ion-padding">
+    <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+  
+      <ion-item>
+        <ion-label>Nombre: </ion-label>
+        <ion-input type="text" placeholder="Nombre Completo"
+                   name="nombre" [(ngModel)]= "sugerencia.nombre" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Rut: </ion-label>
+        <ion-input type="text" placeholder="EJ: 12543123-2"
+                   name="rut" [(ngModel)]= "sugerencia.rut" required>
+        </ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Email: </ion-label>
+        <ion-input type="email" placeholder="Correo Institucional"
+                   name="email" value="" [(ngModel)]= "sugerencia.email"
+                   required>
+        </ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label>Opinion: </ion-label>
+        <ion-input type="text" placeholder="Opinion o sugerencia"
+                   name="opinion" value="" [(ngModel)]= "sugerencia.opinion"
+                   required>
+        </ion-input>
+      </ion-item>
+
+
+
+  
+      <ion-button [disabled] ="formulario.invalid"
+              type="submit" expand="block" routerLink="/inicio">
+        Enviar Mensaje
+      </ion-button>
+  
+    </form>
+  </ion-card>
+
+
+  
+  <img src="assets/logo.png" class="ion-padding">
+  <br><br>
+
+
+</ion-content>

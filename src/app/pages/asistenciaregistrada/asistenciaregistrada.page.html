@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="primary"></ion-icon>
+       </ion-button>
+    </ion-buttons>
+
+    <ion-title>¡Estás Presente!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <img src="assets/logo.png" class="ion-padding">
+
+
+  <ion-card class="card">
+    <br>
+    <ion-card-title class="titulo">¡Estás Presente!</ion-card-title>
+    <ion-card-content>
+      <p>
+        Asistencia registrada con Éxito. Recuerda que en clases aprendes hasta lo imposible.
+     </p>
+    </ion-card-content>
+    <icon-card>
+      <img src="assets/check.png" class="ion-padding">
+    </icon-card>
+
+    <ion-button routerLink="/inicio" expand="block" fill="outline">Inicio</ion-button>
+
+  </ion-card>
+
+</ion-content>

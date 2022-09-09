@@ -1,0 +1,99 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="primary"></ion-icon>
+       </ion-button>
+    </ion-buttons>
+
+    <ion-title>Registro Docente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="titulo">Registrar Docente</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+
+  <ion-card class="card">
+    
+
+    <ion-card-content>
+      <p class="parrafo">
+      Para poder registrar la asistencia (Profesor), debes crear una cuenta.
+     </p>
+     <P class="si" routerLink="/login"> Si tienes cuenta Inicia Sesión Aquí.</P>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/logoregister.png" class="ion-padding">
+    <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+  
+      <ion-item>
+        <ion-label>Nombre: </ion-label>
+        <ion-input type="text" placeholder="Nombre Completo"
+                   name="nombre" [(ngModel)]= "docente.nombre" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Rut: </ion-label>
+        <ion-input type="text" placeholder="EJ: 12543123-2"
+                   name="rut" [(ngModel)]= "docente.rut" required>
+        </ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Email: </ion-label>
+        <ion-input type="email" placeholder="Correo Institucional"
+                   name="email" value="" [(ngModel)]= "docente.email"
+                   required>
+        </ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label>Materia: </ion-label>
+        <ion-input type="text" placeholder="Materia que educa"
+                   name="carrera" value="" [(ngModel)]= "docente.materia"
+                   required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sede: </ion-label>
+        <ion-input type="text" placeholder="Sede donde Trabaja"
+                   name="sede" value="" [(ngModel)]= "docente.sede"
+                   required>
+        </ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Contraseña: </ion-label>
+        <ion-input type="password"	 placeholder="Contraseña"
+                   name="password" value="" [(ngModel)]= "docente.password"
+                   required>
+        </ion-input>
+      </ion-item>
+  
+      <ion-button [disabled] ="formulario.invalid"
+              type="submit" expand="block" routerLink="/profesor">
+        Registrar
+      </ion-button>
+  
+    </form>
+  </ion-card>
+
+
+  
+  <img src="assets/logo.png" class="ion-padding">
+  <br><br>
+
+
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="primary"></ion-icon>
+       </ion-button>
+    </ion-buttons>
+
+    <ion-title>Registar Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="titulo">¿Registrar como Docente o Estudiante?</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card class="card">
+    
+
+    <ion-card-content>
+      <p class="parrafo">
+      Para poder registrar la asistencia (Profesor) o tener acceso para quedar presente en la clase (Estudiante), debes crear una cuenta.
+     </p>
+     <P class="si" routerLink="/login"> Si tienes cuenta Inicia Sesión Aquí.</P>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card class="card">
+    <img src="assets/logoregister.png" class="ion-padding">
+    <ion-button routerLink="/registrodocente" expand="block" fill="outline">Registrar Docente</ion-button>
+    <ion-button routerLink="/registro" expand="block" fill="outline">Registrar Estudiante</ion-button>
+  </ion-card>
+
+
+  <img src="assets/logo.png" class="ion-padding">
+</ion-content>

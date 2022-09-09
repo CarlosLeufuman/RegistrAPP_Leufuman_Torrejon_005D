@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="primary"></ion-icon>
+       </ion-button>
+    </ion-buttons>
+
+    <ion-title>Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="card">
+    <ion-card-content>
+      <ion-card-title class="titulo">Hola Alumno</ion-card-title>
+      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card">
+    <ion-card-content>
+    <p class="parrafo">Para quedar presente en la clase debe activar su cámara para poder leer el código QR generado por el Docente.</p>
+  </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card">
+    <br>
+    <ion-card-title class="titulo">Leer QR</ion-card-title>
+    <img src="assets/activarcam.png" class="ion-padding">
+
+  <ion-button routerLink="/asistenciaregistrada" expand="block" fill="outline">Activar Cámara</ion-button>
+</ion-card>
+
+
+<img src="assets/logo.png" class="ion-padding">
+
+
+
+</ion-content>

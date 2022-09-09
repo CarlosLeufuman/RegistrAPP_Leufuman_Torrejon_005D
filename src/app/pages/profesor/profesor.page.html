@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="primary"></ion-icon>
+       </ion-button>
+    </ion-buttons>
+
+    <ion-title>Docente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card class="card">
+    <ion-card-content>
+      <ion-card-title class="titulo">Hola Profesor</ion-card-title>
+      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card">
+    <ion-card-content>
+    <p class="parrafo">Acá Usted podrá generar el Código QR para que los 
+      estudiantes lo puedan escanear para quedar con asistencia presente.</p>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card class="card">
+    <img src="assets/qrprueba1.png" class="ion-padding">
+
+  <ion-button routerLink="/qr" expand="block" fill="outline">Generar QR</ion-button>
+
+
+</ion-card>
+  
+  
+  <img src="assets/logo.png" class="ion-padding">
+</ion-content>

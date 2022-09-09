@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="primary"></ion-icon>
+       </ion-button>
+    </ion-buttons>
+
+    <ion-title>QR Generado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="card">
+    <ion-card-content>
+      <ion-card-title class="titulo">¡Código QR generado con éxito!</ion-card-title>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card">
+    <br>
+    <ion-card-title class="titulo">QR</ion-card-title>
+    <ion-card-content>
+      <p>
+        Ahora debe mostrar el código QR a sus alumnos para que lo puedan escanear, con esto quedar presente.
+     </p>
+    </ion-card-content>
+    <icon-card>
+      <img src="assets/qrprueba.png" class="ion-padding">
+    </icon-card>
+
+    <ion-button routerLink="/inicio" expand="block" fill="outline">Inicio</ion-button>
+  </ion-card>
+
+</ion-content>
